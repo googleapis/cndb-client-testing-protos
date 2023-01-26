@@ -1,5 +1,4 @@
 # Format:
 # module:released-version:current-version
 
-proto-google-cloud-spanner-executor-v1:1.0.0:1.0.0
-google-cloud-spanner:6.34.1:6.34.2-SNAPSHOT
+proto-google-cloud-spanner-executor-v1:1.0.1:1.0.1
