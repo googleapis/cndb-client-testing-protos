@@ -1,0 +1,4 @@
+googleapis/cloud-bigtable-clients-test:
+  - source: google/bigtable/testproxy/test_proxy.proto
+    dest: testproxypb/test_proxy.proto
+
