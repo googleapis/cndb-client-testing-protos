@@ -1,3 +1,3 @@
-releaseType: java
+releaseType: maven
 bumpMinorPreMajor: true
 handleGHRelease: true
