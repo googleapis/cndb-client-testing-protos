@@ -669,6 +669,9 @@ message CreateCloudDatabaseAction {
   // The KMS key used to encrypt the database to be created if the database
   // should be CMEK protected.
   google.spanner.admin.database.v1.EncryptionConfig encryption_config = 5;
+
+  // Optional SQL dialect (GOOGLESQL or POSTGRESQL).  Default: GOOGLESQL.
+  optional string dialect = 6;
 }
 
 // Action that updates the schema of a Cloud Spanner database.
