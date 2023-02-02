@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/googleapis/cndb-client-testing-protos/compare/v1.1.0...v1.2.0) (2023-02-02)
+
+
+### Features
+
+* Add dialect field to CreateCloudDatabaseAction. ([4967c0c](https://github.com/googleapis/cndb-client-testing-protos/commit/4967c0c1266199550b48685c95732ab0ae302a59))
+
 ## 1.1.0 (2023-01-30)
 
 
