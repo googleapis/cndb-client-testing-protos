@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/googleapis/cndb-client-testing-protos/compare/v1.2.0...v1.3.0) (2023-02-24)
+
+
+### Features
+
+* Add PartitionedUpdateAction proto. ([7f53e28](https://github.com/googleapis/cndb-client-testing-protos/commit/7f53e2811927469b6d8ce4276a2024bdcbfab9d0))
+
 ## [1.2.0](https://github.com/googleapis/cndb-client-testing-protos/compare/v1.1.0...v1.2.0) (2023-02-02)
 
 
