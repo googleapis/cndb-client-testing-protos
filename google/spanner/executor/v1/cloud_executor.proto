@@ -25,6 +25,7 @@ import "google/spanner/admin/database/v1/backup.proto";
 import "google/spanner/admin/database/v1/common.proto";
 import "google/spanner/admin/database/v1/spanner_database_admin.proto";
 import "google/spanner/admin/instance/v1/spanner_instance_admin.proto";
+import "google/spanner/v1/spanner.proto";
 import "google/spanner/v1/type.proto";
 
 option go_package = "google.golang.org/genproto/googleapis/spanner/executor/v1;executor";
@@ -104,7 +105,10 @@ message SpannerAction {
     // Action to write a mutation.
     WriteMutationsAction write = 25;
 
-    // Action that contains any administractive operation, like database,
+    // Action to a partitioned update.
+    PartitionedUpdateAction partitioned_update = 27;
+
+    // Action that contains any administrative operation, like database,
     // instance manipulation.
     AdminAction admin = 30;
 
@@ -352,6 +356,24 @@ message MutationAction {
 message WriteMutationsAction {
   // The mutation to write.
   MutationAction mutation = 1;
+}
+
+// PartitionedUpdateAction defines an action to execute a partitioned DML
+// which runs different partitions in parallel.
+message PartitionedUpdateAction {
+  message ExecutePartitionedUpdateOptions {
+    // RPC Priority
+    optional google.spanner.v1.RequestOptions.Priority rpc_priority = 1;
+
+    // Transaction tag
+    optional string tag = 2;
+  }
+
+  // Options for partitioned update.
+  optional ExecutePartitionedUpdateOptions options = 1;
+
+  // Partitioned dml query.
+  QueryAction update = 2;
 }
 
 // StartTransactionAction defines an action of initializing a transaction.
