@@ -1,4 +1,4 @@
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import "google/spanner/admin/instance/v1/spanner_instance_admin.proto";
 import "google/spanner/v1/spanner.proto";
 import "google/spanner/v1/type.proto";
 
-option go_package = "google.golang.org/genproto/googleapis/spanner/executor/v1;executor";
+option go_package = "cloud.google.com/go/spanner/executor/apiv1/executorpb;executorpb";
 option java_multiple_files = true;
 option java_outer_classname = "CloudExecutorProto";
 option java_package = "com.google.spanner.executor.v1";
@@ -389,6 +389,9 @@ message StartTransactionAction {
   // Transaction_seed contains workid and op pair for this transaction, used for
   // testing.
   string transaction_seed = 3;
+
+  // Execution options (e.g., whether transaction is opaque, optimistic).
+  optional TransactionExecutionOptions execution_options = 4;
 }
 
 // Concurrency for read-only transactions.
@@ -449,6 +452,12 @@ message ColumnMetadata {
 
   // Column type.
   google.spanner.v1.Type type = 2;
+}
+
+// Options for executing the transaction.
+message TransactionExecutionOptions {
+  // Whether optimistic concurrency should be used to execute this transaction.
+  bool optimistic = 1;
 }
 
 // FinishTransactionAction defines an action of finishing a transaction.
