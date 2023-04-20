@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/googleapis/cndb-client-testing-protos/compare/v1.3.0...v1.4.0) (2023-04-20)
+
+
+### Features
+
+* Add TransactionExecutionOptions to StartTransactionAction. ([0873da2](https://github.com/googleapis/cndb-client-testing-protos/commit/0873da2947d870e8bcb3155ec5a66c2857d22ded))
+
 ## [1.3.0](https://github.com/googleapis/cndb-client-testing-protos/compare/v1.2.0...v1.3.0) (2023-02-24)
 
 
