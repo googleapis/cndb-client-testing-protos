@@ -22,7 +22,7 @@ import "google/bigtable/v2/data.proto";
 import "google/protobuf/duration.proto";
 import "google/rpc/status.proto";
 
-option go_package = "./testproxypb";
+option go_package = "cloud.google.com/go/bigtable/testproxy/testproxypb;testproxypb";
 option java_multiple_files = true;
 option java_package = "com.google.cloud.bigtable.testproxy";
 
@@ -249,6 +249,42 @@ message ReadModifyWriteRowRequest {
   google.bigtable.v2.ReadModifyWriteRowRequest request = 2;
 }
 
+// Request to test proxy service to execute a query.
+message ExecuteQueryRequest {
+  // The ID of the target client object.
+  string client_id = 1;
+
+  // The raw request to the Bigtable server.
+  google.bigtable.v2.ExecuteQueryRequest request = 2;
+}
+
+// Response from test proxy service for ExecuteQueryRequest.
+message ExecuteQueryResult {
+  // The RPC status from the client binding.
+  google.rpc.Status status = 1;
+
+  // deprecated
+  google.bigtable.v2.ResultSetMetadata result_set_metadata = 2;
+
+  // Name and type information for the query result.
+  ResultSetMetadata metadata = 4;
+
+  // Encoded version of the ResultSet. Should not contain type information.
+  repeated SqlRow rows = 3;
+}
+
+// Schema information for the query result.
+message ResultSetMetadata {
+  // Column metadata for each column inthe query result.
+  repeated google.bigtable.v2.ColumnMetadata columns = 1;
+}
+
+// Representation of a single row in the query result.
+message SqlRow {
+  // Columnar values returned by the query.
+  repeated google.bigtable.v2.Value values = 1;
+}
+
 // Note that all RPCs are unary, even when the equivalent client binding call
 // may be streaming. This is an intentional simplification.
 //
@@ -311,4 +347,7 @@ service CloudBigtableV2TestProxy {
 
   // Performs a read-modify-write operation with the client.
   rpc ReadModifyWriteRow(ReadModifyWriteRowRequest) returns (RowResult) {}
+
+  // Executes a BTQL query with the client.
+  rpc ExecuteQuery(ExecuteQueryRequest) returns (ExecuteQueryResult) {}
 }
