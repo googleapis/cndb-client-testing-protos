@@ -147,9 +147,9 @@ google-api-core==2.11.0 \
     #   -r requirements.in
     #   google-cloud-core
     #   google-cloud-storage
-google-auth==2.15.0 \
-    --hash=sha256:6897b93556d8d807ad70701bb89f000183aea366ca7ed94680828b37437a4994 \
-    --hash=sha256:72f12a6cfc968d754d7bdab369c5c5c16032106e52d32c6dfd8484e4c01a6d1f
+google-auth==2.35.0 \
+    --hash=sha256:25df55f327ef021de8be50bad0dfd4a916ad0de96da86cd05661c9297723ad3f \
+    --hash=sha256:f4c64ed4e01e8e8b646ef34c018f8bf3338df0c8e37d8b3bba40e7f574a3278a
     # via
     #   -r requirements.in
     #   gcp-releasetool
