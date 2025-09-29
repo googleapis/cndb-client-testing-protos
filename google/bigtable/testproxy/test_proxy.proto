@@ -261,7 +261,7 @@ message ExecuteQueryRequest {
   // A collection of proto descriptor files for deserializing PROTO/ENUM columns
   // in the query result. The descriptor files must be provided in dependency
   // order.
-  proto2.FileDescriptorSet file_descriptor_set = 3;
+  google.protobuf.FileDescriptorSet file_descriptor_set = 3;
 }
 
 // Response from test proxy service for ExecuteQueryRequest.
