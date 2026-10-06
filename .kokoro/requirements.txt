@@ -132,9 +132,9 @@ cryptography==39.0.0 \
     #   -r requirements.in
     #   gcp-releasetool
     #   secretstorage
-gcp-docuploader==0.6.4 \
-    --hash=sha256:01486419e24633af78fd0167db74a2763974765ee8078ca6eb6964d0ebd388af \
-    --hash=sha256:70861190c123d907b3b067da896265ead2eeb9263969d6955c9e0bb091b5ccbf
+gcp-docuploader==0.8.0 \
+    --hash=sha256:6da37eee258ae0f12598313d0d60b703b4a32ca8ef0d427d5dd6593f8980a84a \
+    --hash=sha256:aaa497e035e1b75c8d4fe0236d94d4aa67ec3617ff9b95f6245a347b3984030d
     # via -r requirements.in
 gcp-releasetool==1.10.2 \
     --hash=sha256:6a6722680d2221096d4b37747ec368071c00eda0261ba6de3c75b233d867d6d1 \
