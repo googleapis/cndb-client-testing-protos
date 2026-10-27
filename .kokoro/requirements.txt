@@ -136,9 +136,9 @@ gcp-docuploader==0.6.4 \
     --hash=sha256:01486419e24633af78fd0167db74a2763974765ee8078ca6eb6964d0ebd388af \
     --hash=sha256:70861190c123d907b3b067da896265ead2eeb9263969d6955c9e0bb091b5ccbf
     # via -r requirements.in
-gcp-releasetool==1.10.2 \
-    --hash=sha256:6a6722680d2221096d4b37747ec368071c00eda0261ba6de3c75b233d867d6d1 \
-    --hash=sha256:e3098c6da3dcdb9dd02c56fc7949da02fa0c387f666998117031d64338ad34db
+gcp-releasetool==1.17.0 \
+    --hash=sha256:1a759f4b0906f4ea9dc7db3649aa11a632c72f6dc6a54f10cf57c1925d034a1c \
+    --hash=sha256:f23db51d85484998af5549181be726f177bf90b481de238fe7a99ec970266b6b
     # via -r requirements.in
 google-api-core==2.11.0 \
     --hash=sha256:4b9bb5d5a380a0befa0573b302651b8a9a89262c1730e37bf423cec511804c22 \
